@@ -1,0 +1,27 @@
+spring:
+  main.web-application-type: none
+  application.name: wisedata
+  config.import: optional:file:local/.env[.properties]
+  datasource:
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    url: ${DB_URL}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate.ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format-sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: ${SERVER_PORT}
+
+spark:
+  configuration:
+    master: ${SPARK_MASTER_URL}
+    name: ${SPARK_APP_NAME}
+    memory: ${SPARK_EXECUTOR_MEMORY}
+    cores: ${SPARK_EXECUTOR_CORES}
+    executors: ${SPARK_EXECUTOR_INSTANCES}
+    options: ${SPARK_DRIVER_OPTIONS}
