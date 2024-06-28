@@ -29,7 +29,7 @@
 	<properties>
 		<java.version>17</java.version>
         <scala.dep.version>2.12</scala.dep.version>
-        <spark.version>3.5.1</spark.version>
+        <spark.version>3.4.3</spark.version>
 		<scala.version>2.12.18</scala.version>
 	</properties>
 	<dependencies>
@@ -50,10 +50,16 @@
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
         </dependency>
- 		<dependency>
+ 		<!-- <dependency>
 			<groupId>jakarta.servlet</groupId>
 			<artifactId>jakarta.servlet-api</artifactId>
 			<version>6.0.0</version>
+		</dependency> -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
 		</dependency>
 
         <dependency>

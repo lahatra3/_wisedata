@@ -34,7 +34,8 @@ public class WisedataService {
             .set("spark.driver.cores", sparkConfiguration.getCores())
             .set("spark.executor.instances", sparkConfiguration.getExecutors())
             .set("spark.executor.extraJavaOptions", sparkConfiguration.getOptions())
-            .set("spark.driver.extraJavaOptions", sparkConfiguration.getOptions());
+            .set("spark.driver.extraJavaOptions", sparkConfiguration.getOptions())
+            .set("spark.ui.enabled", "false");
 
         SparkSession sparkSession = SparkSession.builder().config(sparkConf).getOrCreate();
 

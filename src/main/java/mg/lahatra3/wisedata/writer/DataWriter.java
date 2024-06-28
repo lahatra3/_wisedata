@@ -27,7 +27,7 @@ public class DataWriter implements Consumer<Dataset<Row>> {
                     .mode("append")
                     .option("url", dataSinkConfiguration.getUrl())
                     .option("dbtable", dataSinkConfiguration.getTable())
-                    .option("username", dataSinkConfiguration.getUsername())
+                    .option("user", dataSinkConfiguration.getUsername())
                     .option("password", dataSinkConfiguration.getPassword())
                     .option("batchsize", dataSinkConfiguration.getBatchSize())
                     .save();

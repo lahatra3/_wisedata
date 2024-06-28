@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 public class WisedataListener {
     
     private static final int ONE_SECOND_IN_MILLIS = 1000;
-    private static final int THREE_SECOND_IN_MILLIS = 3 * ONE_SECOND_IN_MILLIS;
+    // private static final int THREE_SECOND_IN_MILLIS = 3 * ONE_SECOND_IN_MILLIS;
 
     @Autowired
 	private WisedataRunner wisedataRunner;

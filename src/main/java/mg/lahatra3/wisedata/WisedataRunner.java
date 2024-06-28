@@ -22,21 +22,26 @@ public class WisedataRunner implements Runnable {
 
         log.info("Starting...");
 
+        // List<Wisedata> pending = wisedataService
+        log.info("START DATE: {}", System.currentTimeMillis());
+        
         DataSourceConfiguration dataSourceConfiguration = DataSourceConfiguration.builder()
             .url("jdbc:postgresql://localhost:5432/wisedata?currentSchema=public")
-            .username("postgres")
+            .username("wisedata")
             .password("w1s3d_ta")
             .table("mock_data_source")
             .sourceType(DataType.DATABASE).build();
 
         DataSinkConfiguration dataSinkConfiguration = DataSinkConfiguration.builder()
             .url("jdbc:postgresql://localhost:5432/wisedata?currentSchema=public")
-            .username("postgres")
+            .username("wisedata")
             .password("w1s3d_ta")
             .table("mock_data_sink")
             .sinkType(DataType.DATABASE).build();
 
         wisedataService.call(dataSourceConfiguration, dataSinkConfiguration);
         log.info("Finished...");
+
+        log.info("END DATE: {}", System.currentTimeMillis());
     }
 }
