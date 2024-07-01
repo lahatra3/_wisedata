@@ -2,18 +2,18 @@ spring:
   main.web-application-type: none
   application.name: wisedata
   config.import: optional:file:local/.env[.properties]
-  datasource:
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-    url: ${DB_URL}
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    hibernate.ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        format-sql: true
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+  # datasource:
+  #   username: ${DB_USERNAME}
+  #   password: ${DB_PASSWORD}
+  #   url: ${DB_URL}
+  #   driver-class-name: org.postgresql.Driver
+  # jpa:
+  #   hibernate.ddl-auto: update
+  #   show-sql: true
+  #   properties:
+  #     hibernate:
+  #       format-sql: true
+  #       dialect: org.hibernate.dialect.PostgreSQLDialect
 server:
   port: ${SERVER_PORT}
 
